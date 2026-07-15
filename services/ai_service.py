@@ -2,6 +2,7 @@ from groq import Groq
 from dotenv import load_dotenv
 import os
 
+# Loads .env locally. On Render, environment variables are provided automatically.
 load_dotenv()
 
 client = Groq(
@@ -9,7 +10,6 @@ client = Groq(
 )
 
 def ask_ai(question):
-
     prompt = f"""
     You are an expert Banking Exam Tutor.
 
