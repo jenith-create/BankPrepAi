@@ -8,7 +8,7 @@ A Flask web app that helps students prepare for Indian banking exams. It has thr
 
 > For learning purposes. Dates and eligibility rules change, so always confirm them in the official notification.
 
-**Live demo:** _add your Render URL here_
+**Live demo:** https://bankprepai-chay.onrender.com/
 
 ## Tech stack
 
