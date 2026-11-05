@@ -1,102 +1,71 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Banking Assistant</title>
+{% extends "base.html" %}
+{% block title %}AI Banking Assistant{% endblock %}
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+{% block content %}
+<section class="card assistant-card shadow-sm p-3 p-md-4 mb-4"
+         aria-labelledby="question-heading">
+    <h2 id="question-heading" class="h5 mb-3">What would you like to know?</h2>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+    <form method="POST">
+        <label for="question" class="form-label">Your question</label>
 
-<body>
-    <header class="app-header py-4">
-        <div class="container">
-            <div class="d-flex align-items-center gap-3">
-                <div class="fs-2" aria-hidden="true">🏦</div>
-                <div>
-                    <h1 class="h3 mb-1">AI Banking Assistant</h1>
-                    <p class="mb-0 opacity-75">Ask A question and learn banking concepts.</p>
-                </div>
-            </div>
+        <div class="input-group input-group-lg">
+            <input
+                id="question"
+                type="text"
+                class="form-control"
+                name="question"
+                placeholder="For example: What is a fixed deposit?"
+                aria-describedby="question-help"
+                required
+            >
+            <button class="btn btn-primary px-4" type="submit">
+                Ask
+            </button>
         </div>
-    </header>
 
-    <main class="container py-4 py-md-5" style="max-width: 850px;">
-        <section class="card assistant-card shadow-sm p-3 p-md-4 mb-4"
-                 aria-labelledby="question-heading">
-            <h2 id="question-heading" class="h5 mb-3">What would you like to know?</h2>
+        <div id="question-help" class="form-text">
+            Ask about banking terms, services, or exam topics.
+        </div>
+    </form>
+</section>
 
-            <form method="POST">
-                <label for="question" class="form-label">Your question</label>
+<section aria-labelledby="conversation-heading">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 id="conversation-heading" class="h5 mb-0">Conversation</h2>
+        {% if history %}
+            <span class="badge text-bg-light">{{ history|length }} question{% if history|length != 1 %}s{% endif %}</span>
+        {% endif %}
+    </div>
 
-                <div class="input-group input-group-lg">
-                    <input
-                        id="question"
-                        type="text"
-                        class="form-control"
-                        name="question"
-                        placeholder="For example: What is a fixed deposit?"
-                        aria-describedby="question-help"
-                        required
-                    >
-                    <button class="btn btn-primary px-4" type="submit">
-                        Ask
-                    </button>
-                </div>
-
-                <div id="question-help" class="form-text">
-                    Ask about banking terms, services, or exam topics.
-                </div>
-            </form>
-        </section>
-
-        <section aria-labelledby="conversation-heading">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h2 id="conversation-heading" class="h5 mb-0">Conversation</h2>
-                {% if history %}
-                    <span class="badge text-bg-light">{{ history|length }} question{% if history|length != 1 %}s{% endif %}</span>
-                {% endif %}
-            </div>
-
-            {% if history %}
-                {% for chat in history %}
-                    <article class="card chat-card shadow-sm mb-3">
-                        <div class="card-body p-3 p-md-4">
-                            <div class="mb-4">
-                                <div class="question-label small fw-semibold text-uppercase mb-2">
-                                    Your question
-                                </div>
-                                <p class="mb-0">{{ chat.question }}</p>
-                            </div>
-
-                            <div class="border-top pt-3">
-                                <div class="small fw-semibold text-primary text-uppercase mb-2">
-                                    AI Banking Tutor
-                                </div>
-                                <p class="answer mb-0">{{ chat.answer }}</p>
-                            </div>
+    {% if history %}
+        {% for chat in history %}
+            <article class="card chat-card shadow-sm mb-3">
+                <div class="card-body p-3 p-md-4">
+                    <div class="mb-4">
+                        <div class="question-label small fw-semibold mb-2">
+                            Your question
                         </div>
-                    </article>
-                {% endfor %}
-            {% else %}
-                <div class="text-center bg-white rounded-4 shadow-sm p-5">
-                    <div class="display-6 mb-2" aria-hidden="true">💬</div>
-                    <h3 class="h6">Your conversation will appear here</h3>
-                    <p class="text-secondary mb-0">
-                        Enter a banking question above to get started.
-                    </p>
-                </div>
-            {% endif %}
-        </section>
+                        <p class="mb-0">{{ chat.question }}</p>
+                    </div>
 
-        <p class="small text-secondary text-center mt-4 mb-0">
-            For learning purposes. Verify important financial information with your bank.
-        </p>
-    </main>
-</body>
-</html>
+                    <div class="border-top pt-3">
+                        <div class="small fw-semibold text-primary mb-2">
+                            AI Banking Tutor
+                        </div>
+                        <p class="answer mb-0">{{ chat.answer }}</p>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    {% else %}
+        <div class="text-center bg-white rounded-4 shadow-sm p-5">
+            <div class="display-6 mb-2" aria-hidden="true">💬</div>
+            <h3 class="h6">Your conversation will appear here</h3>
+            <p class="text-secondary mb-0">
+                Enter a banking question above to get started.
+            </p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}
