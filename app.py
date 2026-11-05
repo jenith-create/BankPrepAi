@@ -18,7 +18,7 @@ def home():
         chat_collection.insert_one({"question": question, "answer": answer})
 
     history = list(chat_collection.find().sort("_id", -1))
-    return render_template("index.html", history=history)
+    return render_template("index.html", history=history, active="ask")
 
 
 @app.route("/exams")
