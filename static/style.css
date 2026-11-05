@@ -1,0 +1,206 @@
+/* AI Banking Assistant — static/style.css
+   Load AFTER the Bootstrap stylesheet so these rules override it. */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+:root {
+    --ink: #14213d;          /* headings, strong text */
+    --text: #2b3a55;         /* body text */
+    --muted: #5b6b82;        /* labels, help text */
+    --paper: #eef2f6;        /* page background */
+    --surface: #ffffff;      /* cards */
+    --navy: #14213d;         /* header */
+    --green: #0f6b5c;        /* primary action */
+    --green-dark: #0b5347;
+    --brass: #b08a3e;        /* ledger rule on answers */
+    --line: #d8e0ea;
+
+    --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-read: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Base ---------- */
+
+body {
+    background: var(--paper);
+    color: var(--text);
+    font-family: var(--font-ui);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .h3, .h5, .h6 {
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* ---------- Header ---------- */
+
+.app-header {
+    background: var(--navy);
+    color: #fff;
+    border-bottom: 4px solid var(--brass);
+}
+
+.app-header h1 {
+    color: #fff;
+    font-family: var(--font-read);
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.app-header p {
+    color: #c9d4e5;
+    opacity: 1 !important;
+}
+
+/* ---------- Ask card ---------- */
+
+.assistant-card,
+.chat-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(20, 33, 61, 0.05) !important;
+}
+
+.assistant-card {
+    border-top: 3px solid var(--green);
+}
+
+.form-label {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.form-control {
+    border-color: #b9c5d6;
+    color: var(--ink);
+}
+
+.form-control::placeholder {
+    color: #8793a6;
+}
+
+.form-control:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 0.2rem rgba(15, 107, 92, 0.18);
+}
+
+.form-text {
+    color: var(--muted);
+}
+
+/* Primary button */
+.btn-primary {
+    --bs-btn-bg: var(--green);
+    --bs-btn-border-color: var(--green);
+    --bs-btn-hover-bg: var(--green-dark);
+    --bs-btn-hover-border-color: var(--green-dark);
+    --bs-btn-active-bg: var(--green-dark);
+    --bs-btn-active-border-color: var(--green-dark);
+    --bs-btn-focus-shadow-rgb: 15, 107, 92;
+    font-weight: 600;
+}
+
+/* ---------- Conversation ---------- */
+
+#conversation-heading {
+    color: var(--ink);
+}
+
+.badge.text-bg-light {
+    background: var(--surface) !important;
+    border: 1px solid var(--line);
+    color: var(--muted) !important;
+    font-weight: 500;
+}
+
+/* The question: quiet, compact */
+.question-label {
+    color: var(--muted);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.chat-card .card-body p {
+    color: var(--ink);
+}
+
+/* The answer: set like a ledger entry, with a brass rule on the left */
+.chat-card .border-top {
+    border-top: 1px solid var(--line) !important;
+}
+
+.chat-card .text-primary {
+    color: var(--green) !important;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+.answer {
+    white-space: pre-wrap;
+    font-family: var(--font-read);
+    font-size: 1.075rem;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 68ch;
+    padding-left: 1rem;
+    border-left: 3px solid var(--brass);
+}
+
+/* ---------- Empty state ---------- */
+
+section[aria-labelledby="conversation-heading"] .bg-white {
+    background: var(--surface) !important;
+    border: 1px dashed #b9c5d6;
+    box-shadow: none !important;
+}
+
+section[aria-labelledby="conversation-heading"] .text-secondary {
+    color: var(--muted) !important;
+}
+
+/* ---------- Footer note ---------- */
+
+main > p.small {
+    color: var(--muted) !important;
+}
+
+/* ---------- Accessibility ---------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(15, 107, 92, 0.45);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 575.98px) {
+    .input-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .input-group > .form-control,
+    .input-group > .btn {
+        width: 100%;
+        border-radius: 0.5rem !important;
+    }
+
+    .answer {
+        font-size: 1rem;
+    }
+}
