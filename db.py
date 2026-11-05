@@ -20,3 +20,4 @@ except Exception as e:
 db = client["ai_banking_assistant"]
 
 chat_collection = db["chat_history"]
+exams_collection = db["exams"]

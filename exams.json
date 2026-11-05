@@ -1,0 +1,332 @@
+[
+  {
+    "exam_id": "ibps-po-2026",
+    "name": "IBPS PO/MT (CRP PO/MT-XVI)",
+    "conducting_body": "IBPS",
+    "cycle": "2026-27",
+    "apply_start": "2026-07-01",
+    "apply_end": "2026-07-21",
+    "stages": [
+      {
+        "name": "Prelims",
+        "dates": [
+          "2026-08-22",
+          "2026-08-23"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Mains",
+        "dates": [
+          "2026-10-04"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Interview",
+        "dates": [],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 20,
+      "age_max": 30,
+      "age_cutoff": "2026-07-01",
+      "relaxation": {
+        "SC": 5,
+        "ST": 5,
+        "OBC": 3,
+        "PwBD": 10,
+        "ExServicemen": 5
+      },
+      "education": "Graduation in any discipline from a recognised university",
+      "min_percent": null,
+      "attempts": "No fixed limit (age-based only)"
+    },
+    "source_url": "https://www.ibps.in",
+    "last_verified": "2026-11-05",
+    "verification": "good",
+    "notes": "OBC relaxation applies to non-creamy layer only. PwBD relaxation varies by sub-category; check the notification. Next cycle: IBPS usually notifies PO around June-July (not yet announced)."
+  },
+  {
+    "exam_id": "ibps-clerk-2026",
+    "name": "IBPS Clerk / Customer Service Associate (CRP CSA-XVI)",
+    "conducting_body": "IBPS",
+    "cycle": "2026-27",
+    "apply_start": "2026-08-01",
+    "apply_end": "2026-08-21",
+    "stages": [
+      {
+        "name": "Prelims",
+        "dates": [
+          "2026-10-10",
+          "2026-10-11"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Mains",
+        "dates": [
+          "2026-12-27"
+        ],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 20,
+      "age_max": 28,
+      "age_cutoff": "2026-08-01",
+      "relaxation": {
+        "SC": 5,
+        "ST": 5,
+        "OBC": 3,
+        "PwBD": 10,
+        "ExServicemen": 5
+      },
+      "education": "Graduation from a recognised university, with computer proficiency",
+      "min_percent": null,
+      "attempts": "No fixed limit (age-based only)"
+    },
+    "source_url": "https://www.ibps.in",
+    "last_verified": "2026-11-05",
+    "verification": "good",
+    "notes": "Sources disagree on the age cut-off date (1 Jul vs 1 Aug 2026); 1 Aug used here, confirm in the notification. Relaxation values are the standard IBPS ones, confirm in the notification. Mains date is from the tentative IBPS calendar. No interview for this post."
+  },
+  {
+    "exam_id": "sbi-po-2026",
+    "name": "SBI Probationary Officer (PO)",
+    "conducting_body": "SBI",
+    "cycle": "2026-27",
+    "apply_start": "2026-06-18",
+    "apply_end": "2026-07-08",
+    "stages": [
+      {
+        "name": "Prelims",
+        "dates": [
+          "2026-08-01",
+          "2026-08-02"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Mains",
+        "dates": [
+          "2026-09-12"
+        ],
+        "tentative": true
+      },
+      {
+        "name": "Interview",
+        "dates": [],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 21,
+      "age_max": 30,
+      "age_cutoff": "2026-04-01",
+      "relaxation": {
+        "SC": 5,
+        "ST": 5,
+        "OBC": 3,
+        "PwBD": 10,
+        "ExServicemen": 5
+      },
+      "education": "Graduation in any discipline; final-year students could apply if graduation was completed by 30 Sep 2026",
+      "min_percent": null,
+      "attempts": "Check the notification"
+    },
+    "source_url": "https://sbi.co.in/web/careers",
+    "last_verified": "2026-11-05",
+    "verification": "good",
+    "notes": "Mains date is not confirmed in the sources found; verify on the SBI careers page. PwBD relaxation is higher for SC/ST (up to 15 years); check the notification."
+  },
+  {
+    "exam_id": "rbi-grade-b-2026",
+    "name": "RBI Officers in Grade B (DR) - General, DEPR, DSIM",
+    "conducting_body": "RBI",
+    "cycle": "2026",
+    "apply_start": "2026-04-29",
+    "apply_end": "2026-05-20",
+    "stages": [
+      {
+        "name": "Phase 1 (General)",
+        "dates": [
+          "2026-06-13"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Phase 1 (DEPR/DSIM)",
+        "dates": [
+          "2026-06-14"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Phase 2 (General)",
+        "dates": [
+          "2026-07-25"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Phase 2 (DEPR/DSIM)",
+        "dates": [
+          "2026-07-26"
+        ],
+        "tentative": false
+      },
+      {
+        "name": "Interview",
+        "dates": [],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 21,
+      "age_max": 30,
+      "age_cutoff": null,
+      "relaxation": {
+        "SC": 5,
+        "ST": 5,
+        "OBC": 3
+      },
+      "education": "Graduation (General stream); DEPR and DSIM streams need different qualifications",
+      "min_percent": 60,
+      "attempts": "Check the notification"
+    },
+    "source_url": "https://www.rbi.org.in",
+    "last_verified": "2026-11-05",
+    "verification": "partial",
+    "notes": "Age cut-off date, relaxations, the percentage for reserved categories and attempt limits were not confirmed; fill these from the official notification. 60% applies to the General stream as reported."
+  },
+  {
+    "exam_id": "sbi-clerk-2026",
+    "name": "SBI Junior Associate (Customer Support & Sales) / Clerk",
+    "conducting_body": "SBI",
+    "cycle": "2026-27",
+    "apply_start": null,
+    "apply_end": "2026-08-31",
+    "stages": [
+      {
+        "name": "Prelims",
+        "dates": [],
+        "tentative": true
+      },
+      {
+        "name": "Mains",
+        "dates": [],
+        "tentative": true
+      },
+      {
+        "name": "Local Language Test",
+        "dates": [],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 20,
+      "age_max": 28,
+      "age_cutoff": "2026-04-01",
+      "relaxation": {
+        "SC": 5,
+        "ST": 5,
+        "OBC": 3
+      },
+      "education": "Graduation in any discipline; local language proficiency required",
+      "min_percent": null,
+      "attempts": "Check the notification"
+    },
+    "source_url": "https://sbi.co.in/web/careers",
+    "last_verified": "2026-11-05",
+    "verification": "low",
+    "notes": "Sources conflict (vacancy counts, age cut-off date, whether a general or special drive). Exam dates were not confirmed. Fill every field from the official SBI notification before showing this to users."
+  },
+  {
+    "exam_id": "ibps-rrb-po-2026",
+    "name": "IBPS RRB Officer Scale I (CRP RRBs-XV)",
+    "conducting_body": "IBPS",
+    "cycle": "2026-27",
+    "apply_start": "2026-09-01",
+    "apply_end": "2026-09-21",
+    "stages": [
+      {
+        "name": "Prelims",
+        "dates": [
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "tentative": true
+      },
+      {
+        "name": "Mains",
+        "dates": [
+          "2026-12-20"
+        ],
+        "tentative": true
+      },
+      {
+        "name": "Interview",
+        "dates": [],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 30,
+      "age_cutoff": "2026-09-01",
+      "relaxation": {
+        "OBC": 3
+      },
+      "education": "Bachelor's degree in any discipline; knowledge of the local language of the state applied for",
+      "min_percent": null,
+      "attempts": "No fixed limit (age-based only)"
+    },
+    "source_url": "https://www.ibps.in",
+    "last_verified": "2026-11-05",
+    "verification": "partial",
+    "notes": "Exam dates come from the tentative IBPS calendar. Only the OBC relaxation (3 years) was confirmed; check the notification for SC/ST/PwBD/ex-servicemen."
+  },
+  {
+    "exam_id": "ibps-rrb-clerk-2026",
+    "name": "IBPS RRB Office Assistant (Multipurpose) (CRP RRBs-XV)",
+    "conducting_body": "IBPS",
+    "cycle": "2026-27",
+    "apply_start": "2026-09-01",
+    "apply_end": "2026-09-21",
+    "stages": [
+      {
+        "name": "Prelims",
+        "dates": [
+          "2026-12-06",
+          "2026-12-12",
+          "2026-12-13"
+        ],
+        "tentative": true
+      },
+      {
+        "name": "Mains",
+        "dates": [
+          "2027-01-30"
+        ],
+        "tentative": true
+      }
+    ],
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 28,
+      "age_cutoff": "2026-09-01",
+      "relaxation": {
+        "OBC": 3
+      },
+      "education": "Bachelor's degree in any discipline; knowledge of the local language of the state applied for",
+      "min_percent": null,
+      "attempts": "No fixed limit (age-based only)"
+    },
+    "source_url": "https://www.ibps.in",
+    "last_verified": "2026-11-05",
+    "verification": "partial",
+    "notes": "Exam dates come from the tentative IBPS calendar. The 1 Sep 2026 age cut-off is confirmed for Officer Scale I and assumed the same here; only the OBC relaxation (3 years) was confirmed. No interview for this post."
+  }
+]

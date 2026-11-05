@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Check eligibility | AI Banking Assistant{% endblock %}
+
+{% block content %}
+{% set badge = {'eligible': 'success', 'check': 'warning', 'not_eligible': 'danger'} %}
+{% set label = {'eligible': 'Eligible', 'check': 'Likely eligible, verify', 'not_eligible': 'Not eligible'} %}
+
+<section class="card assistant-card shadow-sm p-3 p-md-4 mb-4" aria-labelledby="elig-heading">
+    <h2 id="elig-heading" class="h5 mb-3">Check your eligibility</h2>
+
+    {% if error %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="dob" class="form-label">Date of birth</label>
+                <input id="dob" name="dob" type="date" class="form-control"
+                       value="{{ form.get('dob', '') }}" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="category" class="form-label">Category</label>
+                <select id="category" name="category" class="form-select" required>
+                    {% for value, item in categories.items() %}
+                    <option value="{{ value }}" {% if form.get('category') == value %}selected{% endif %}>{{ item[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="education" class="form-label">Education</label>
+                <select id="education" name="education" class="form-select" required>
+                    {% for value, text in education.items() %}
+                    <option value="{{ value }}" {% if form.get('education') == value %}selected{% endif %}>{{ text }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="percent" class="form-label">Graduation percentage (optional)</label>
+                <input id="percent" name="percent" type="number" step="0.01" min="0" max="100"
+                       class="form-control" value="{{ form.get('percent', '') }}">
+            </div>
+        </div>
+
+        <button class="btn btn-primary mt-3 px-4" type="submit">Check eligibility</button>
+    </form>
+</section>
+
+{% if results %}
+<h2 class="h5 mb-3">Results</h2>
+{% for r in results %}
+<article class="card chat-card shadow-sm mb-3">
+    <div class="card-body p-3 p-md-4">
+        <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+            <h3 class="h6 mb-0">{{ r.exam.name }}</h3>
+            <span class="badge text-bg-{{ badge[r.status] }}">{{ label[r.status] }}</span>
+        </div>
+
+        <p class="small mb-2">{{ r.exam.apply_text }}.
+            {% if not r.exam.applications_open %}This result shows whether you met this year's rules; next year's cut-off dates will differ.{% endif %}
+        </p>
+
+        {% if r.reasons %}
+        <ul class="mb-2">
+            {% for reason in r.reasons %}<li>{{ reason }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if r.warnings %}
+        <ul class="small mb-0">
+            {% for warning in r.warnings %}<li>{{ warning }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if r.status == 'eligible' %}
+        <p class="mb-0">You meet the age and education rules recorded for this exam.</p>
+        {% endif %}
+    </div>
+</article>
+{% endfor %}
+{% endif %}
+{% endblock %}
