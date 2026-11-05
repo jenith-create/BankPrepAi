@@ -27,4 +27,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Render deploy
-        run: curl -fsS -X POST "${{ secrets.https://api.render.com/deploy/srv-d9bqv5ecjfls73cn45i0?key=2B8oBxO83bk }}"
+        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
